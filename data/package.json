@@ -1,0 +1,19 @@
+{
+  "name": "discord-sm",
+  "version": "1.0.0",
+  "description": "Discord bot that fixes social media embeds and enables music playback",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --no-deprecation --env-file=.env src/index.js"
+  },
+  "author": "philippgitpush",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/opus": "^0.9.0",
+    "discord-player": "^6.6.8",
+    "discord.js": "^14.14.1",
+    "fs": "^0.0.1-security",
+    "play-dl": "^1.9.7",
+    "tenorjs": "^1.0.10"
+  }
+}
