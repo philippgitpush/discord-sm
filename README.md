@@ -2,7 +2,7 @@
 > Please note that this bot is not actively maintained. Some services, especially those related to embed fixes, may occasionally go down.
 
 > [!IMPORTANT]  
-> The YouTube / Spotify / SoundCloud resolver `play-dl` seems to keep breaking(?) and plays the wrong songs. You can install `youtube-ext`, `@distube/ytdl-core`, `yt-stream` or `ytdl-core` instead. To do this, remove `play-dl` by running `npm remove play-dl` and then install another resolver with `npm install <resolver-of-choice>` in the `data/` directory. Make sure that you have installed NodeJS for this to work. Then recreate the Docker Compose project with `docker Compose up --build --force-recreate --no-cache`.
+> The YouTube / Spotify / SoundCloud resolver `play-dl` seems to keep breaking(?) and plays the wrong songs. You can install `youtube-ext`, `@distube/ytdl-core`, `yt-stream` or `ytdl-core` instead. To do this, remove `play-dl` by running `npm remove play-dl` and then install another resolver with `npm install <resolver-of-choice>` in the `data/` directory. Make sure that you have installed NodeJS for this to work. Then recreate the Docker Compose project with `docker compose up --build --force-recreate --no-cache`.
 
 # Discord-SM
 
