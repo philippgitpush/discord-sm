@@ -1,6 +1,9 @@
 > [!NOTE]  
 > Please note that this bot is not actively maintained. Some services, especially those related to embed fixes, may occasionally go down.
 
+> [!IMPORTANT]  
+> The YouTube / Spotify / SoundCloud resolver `play-dl` seems to keep breaking(?) and plays the wrong songs. You can install `youtube-ext`, `@distube/ytdl-core`, `yt-stream` or `ytdl-core` instead. To do this, remove `play-dl` by running `npm remove play-dl` and then install another resolver with `npm install <resolver-of-choice>` in the `data/` directory. Make sure that you have installed NodeJS for this to work. Then recreate the Docker Compose project with `docker Compose up --build --force-recreate --no-cache`.
+
 # Discord-SM
 
 This is a Node.js-based Discord bot that plays music from various sources including Spotify, YouTube, and SoundCloud. It also includes features for managing the music queue, supports multiple commands, and handles social media link embeds.
