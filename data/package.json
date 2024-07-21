@@ -13,7 +13,6 @@
     "discord-player": "^6.6.8",
     "discord.js": "^14.14.1",
     "fs": "^0.0.1-security",
-    "play-dl": "^1.9.7",
-    "tenorjs": "^1.0.10"
+    "play-dl": "^1.9.7"
   }
 }

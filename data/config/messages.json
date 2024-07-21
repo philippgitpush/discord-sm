@@ -1,7 +1,6 @@
 {
   "en": {
     "console.musicplayer.playerror": "Error whilst trying to play a song:\n\n%error",
-    "console.randomgif.error": "Error whilst trying to request tenor for gifs:\n\n%error",
     "console.remotecode.error.execution": "Error whilst executing remote code:\n\n%error",
     "console.remotecode.error.format": "Error whilst executing remote code: Invalid code block format",
     "console.commandrefresh.application.refresh.start": "Started refreshing application (/) commands.",
@@ -23,7 +22,6 @@
     "user.command.language.lang.de": "German",
     "user.locale.changed": "OK! From now on I will answer here in English.",
     "user.embedfix.output": "<a:rat_sniff:1225529988212854914> %url",
-    "user.randomgif.error": "Oops, something went wrong. <a:rat_sniff:1225529988212854914>",
     "user.musicplayer.playerror": "Sorry, I couldn't play the song. <a:rat_sniff:1225529988212854914>",
     "user.musicplayer.missing.voicechat": "You are not connected to a voice channel.",
     "user.musicplayer.missing.result": "I don't know where you got that from, but I just searched the entire internet and couldn't find anything about it. <a:rat_sniff:1225529988212854914>",
@@ -54,7 +52,6 @@
     "user.command.language.lang.de": "Deutsch",
     "user.locale.changed": "OK! Von nun an werde ich hier auf Deutsch antworten.",
     "user.embedfix.output": "<a:rat_sniff:1225529988212854914> %url",
-    "user.randomgif.error": "Hoppla, da hat was nicht geklappt. <a:rat_sniff:1225529988212854914>",
     "user.musicplayer.playerror": "Sorry, ich konnte den Song nicht abspielen <a:rat_sniff:1225529988212854914>",
     "user.musicplayer.missing.voicechat": "Du bist nicht mit einem Voice-Channel verbunden",
     "user.musicplayer.missing.result": "Ich weiß nicht, woher du das hast, aber ich habe gerade das ganze Internet durchsucht und konnte nichts dazu finden <a:rat_sniff:1225529988212854914>",
