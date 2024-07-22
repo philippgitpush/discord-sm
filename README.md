@@ -1,18 +1,23 @@
 > [!NOTE]  
-> Please note that this bot is not actively maintained. Some services, especially those related to embed fixes, may occasionally go down.
+> Please note that this bot is not actively maintained.
 
-> [!IMPORTANT]  
-> The YouTube / Spotify / SoundCloud resolver `play-dl` seems to keep breaking(?) and plays the wrong songs. You can install `youtube-ext`, `@distube/ytdl-core`, `yt-stream` or `ytdl-core` instead. To do this, remove `play-dl` by running `npm remove play-dl` and then install another resolver with `npm install <resolver-of-choice>` in the `data/` directory. Make sure that you have installed NodeJS for this to work. Then recreate the Docker Compose project with `docker compose up --build --force-recreate --no-cache`.
+# Discord Embed Buddy
 
-# Discord-SM
+This is a Node.js-based Discord bot that intercepts messages with potentially faulty social media embeds and provides proxy links for the content in response.
 
-This is a Node.js-based Discord bot that plays music from various sources including Spotify, YouTube, and SoundCloud. It also includes features for managing the music queue, supports multiple commands, and handles social media link embeds.
+## URL Replacements
 
-## Features
+Here's an overview of the URL replacements:
 
-- **Music Playback**: Add, skip, stop, and manage songs in the queue from various sources.
-- **Social Media Link Embeds**: Automatically replaces original embeds for social media links with custom embed fixes.
-- **Multilanguage Support**: The bot can operate in multiple languages. Currently available languages are English and German.
+| Original URL       | Replacement URL  |
+|--------------------|------------------|
+| `twitter.com`      | `fxtwitter.com`  |
+| `x.com`            | `fixupx.com`     |
+| `tiktok.com`       | `d.tnktok.com`   |
+| `vm.tiktok.com`    | `d.tnktok.com`   |
+| `reddit.com`       | `rxddit.com`     |
+| `old.reddit.com`   | `old.rxddit.com` |
+| `instagram.com`    | `ddinstagram.com`|
 
 ## Docker Setup
 
@@ -26,6 +31,17 @@ Ensure you have Docker installed on your system.
 
 1. **Clone this repository**.
 
+1. **Configure your `.env` file**.
+
+   Before running the Docker container, make sure you set up the necessary environment variables. Create a `.env` file in the `data` directory with the following content:
+
+   ```sh
+   DISCORD_TOKEN=<discord-token>
+   CLIENT_ID=<bot-client-id>
+   ```
+
+   Replace `<discord-token>` and `<bot-client-id>` with your actual Discord bot token and client ID.
+
 2. **Navigate to the project directory** where the Dockerfile and `compose.yml` are located.
 
 3. **Build and start the Docker container** using Docker Compose:
@@ -36,44 +52,6 @@ Ensure you have Docker installed on your system.
    This command will:
    - Build the Docker image as defined in the `Dockerfile`.
    - Start the container with the configuration specified in `compose.yml`.
-
-### Configuration
-
-Before running the Docker container, make sure you set up the necessary environment variables. Create a `.env` file in the `data` directory with the following content:
-
-```sh
-DISCORD_TOKEN=<discord-token>
-CLIENT_ID=<bot-client-id>
-```
-
-Replace `<discord-token>` and `<bot-client-id>` with your actual Discord bot token and client ID.
-
-## Commands
-
-Here's an overview of the available commands:
-
-### Slash Commands
-
-| Command      | Description                                                                 | Options                               |
-|--------------|-----------------------------------------------------------------------------|---------------------------------------|
-| `/play`      | Add a song from Spotify, YouTube, SoundCloud, or similar to the queue.      | `song`: Song title or link (required) |
-| `/stop`      | Clear the queue and kick the bot from the channel.                          |                                       |
-| `/skip`      | Skip the current song in the queue.                                         |                                       |
-| `/listqueue` | Display a list of the current queue.                                        |                                       |
-| `/wrongsong` | Remove the last song requested by you from the queue.                       |                                       |
-| `/song`      | Display the current song.                                                   |                                       |
-| `/language`  | Set the bot's language for the entire server.                               | `lang`: Language choice (required)    |
-
-### Text Commands
-
-| Command        | Description                                      |
-|----------------|--------------------------------------------------|
-| `!forcedelete` | Deletes all guild-specific commands for the bot. |
-| `!forceupdate` | Updates all guild-specific commands for the bot. |
-
-## Localization
-
-The bot supports multiple languages. Currently available languages are English and German. You can change the bot's language using the `/language` command.
 
 ## License
 

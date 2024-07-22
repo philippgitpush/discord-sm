@@ -1,4 +1,3 @@
-const { getMessage, getGuildLang } = require('./locales');
 const Client = require('./discordClient');
 const Discord = require('discord.js');
 
@@ -8,7 +7,7 @@ Client.on(Discord.Events.MessageCreate, message => {
   if (hasMatchingDomain(message.content)) {
     const url = replaceDomains(extractURL(message.content));
     message.suppressEmbeds(true);
-    message.reply(getMessage('user.embedfix.output', getGuildLang(message.guild.id), { url }));
+    message.reply(url);
   }
 });
 

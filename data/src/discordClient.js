@@ -4,8 +4,7 @@ const Client = new Discord.Client({ intents: [
   Discord.GatewayIntentBits.Guilds,
   Discord.GatewayIntentBits.GuildMessages,
   Discord.GatewayIntentBits.MessageContent,
-  Discord.GatewayIntentBits.GuildMembers ,
-  Discord.GatewayIntentBits.GuildVoiceStates
+  Discord.GatewayIntentBits.GuildMembers
 ] });
 
 const token = process.env.DISCORD_TOKEN;

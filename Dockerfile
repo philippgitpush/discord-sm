@@ -1,6 +1,6 @@
 FROM node:latest
 
-RUN apt-get update && apt-get install -y ffmpeg --no-install-recommends
+RUN apt-get update --no-install-recommends
 
 WORKDIR /usr/app
 
